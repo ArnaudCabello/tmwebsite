@@ -1,0 +1,51 @@
+.leaderboard {
+  background-color: #1a1a1a;
+  color: white;
+  border-radius: 8px;
+  padding: 16px;
+  width: 250px;
+  font-family: Arial, sans-serif;
+}
+  
+  .leaderboard-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .leaderboard-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .leaderboard-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #222;
+  }
+  
+  .leaderboard-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .leaderboard-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-top: 1px solid #333;
+  }
+  
+  
+  .player-name {
+    flex-grow: 1;
+  }
+  
+  .player-stat {
+    color: #4caf50;
+    font-weight: bold;
+  }
