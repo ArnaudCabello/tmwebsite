@@ -8,10 +8,9 @@ function App() {
   const [showFullStats, setShowFullStats] = useState(false);
 
   useEffect(() => {
-    fetch("/players_data.json") // Ensure this file is served correctly
-      .then((response) => {
-        return response.json();
-      })
+    // Fetch the players data from the public folder
+    fetch(`${process.env.PUBLIC_URL}/players_data.json`)
+      .then((response) => response.json()) // Ensure we parse it as JSON
       .then((data) => {
         const enrichedData = data.map((player) => ({
           ...player,
@@ -22,7 +21,13 @@ function App() {
           kd: (player.kills - player.deaths).toFixed(2),
           kpr: (player.kills / Math.max(1, player.rounds_played)).toFixed(2),
           srv: (player.deaths / Math.max(1, player.rounds_played)).toFixed(2),
-          baiter: (Math.max(1, (player.wins / Math.max(1, player.rounds_played)) * (player.kills - player.deaths))).toFixed(2),
+          baiter: (
+            Math.max(
+              1,
+              (player.wins / Math.max(1, player.rounds_played)) *
+                (player.kills - player.deaths)
+            )
+          ).toFixed(2),
         }));
         setPlayers(enrichedData);
       })
