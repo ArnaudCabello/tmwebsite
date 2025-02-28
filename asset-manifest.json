@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tmwebsite/static/css/main.f1010d21.css",
+    "main.js": "/tmwebsite/static/js/main.a31432bd.js",
+    "index.html": "/tmwebsite/index.html",
+    "main.f1010d21.css.map": "/tmwebsite/static/css/main.f1010d21.css.map",
+    "main.a31432bd.js.map": "/tmwebsite/static/js/main.a31432bd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1010d21.css",
+    "static/js/main.a31432bd.js"
+  ]
+}
